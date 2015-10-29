@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Clean Js Code</title>
+
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="../extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="../themes/style/web-2.0.css">
+
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="../themes/transition/horizontal-slide.css">
+
+	<script src="../modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<!-- Begin slides -->
+<section class="slide" id="title-slide">
+	<h1>Writing Clean Javascript Code</h1>
+</section>
+
+<section class="slide" id="title-slide-2">
+	<h1>Writing Javascript Code That Jacob Thinks Looks 'clean'</h1>
+</section>
+<section class="slide" id="slide-4">
+	<h2>This might all sound like common sense</h2>
+	<img src="http://media.giphy.com/media/Lndtxw3ztLhNC/giphy.gif" width="350" height="300" />
+</section>
+<section class="slide" id="slide-3">
+	<h2>Where did you get these ridiculous opinions?</h2>
+	<ol>
+		<li>
+			<h3>.NET</h3>
+			<p>More code, more emphasis on readibility</p>
+		</li>
+		<li>
+			<h3>Moved to js</h3>
+			<p>Style doesn't matter because client side isn't real coding</p>
+		</li>
+		<li>
+			<h3>Mish Guru</h3>
+			<p>100% js built on top of an undocumented api</p>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-5">
+	<h1>The three rules of clean code</h1>
+</section>
+<section class="slide" id="slide-6">
+	<h2>1: Everyone else who is looking at your code is an idiot</h2>
+	<ol>
+		<li>
+			<h3>"This function is really clever if you understand it!"</h3>
+			<p>The idiots won't. Make it readible</p>
+		</li>
+		<li>
+			<h3>"It may be less readible but it saves clock cycles"</h3>
+			<p>You better have a really good reason for blindsiding the idiots like that</p>
+		</li>
+		<li>
+			<h3>"I'm not going to move this into a function just because some people don't get regex"</h3>
+			<p>Most really smart people don't understand regex. Stop being a dick.</p>
+		</li>
+	</ol>
+</section>
+<section class="slide" id="slide-7">
+	<h2>2: Code is read far more than it is written</h2>
+	<ol>
+		<li>
+			<h3>"No it's not"</h3>
+			<p>If your code has never had a bug ever then ok, you're right</p>
+		</li>
+		<li>
+			<h3>"I'm not refactoring my working code, it might break"</h3>
+			<p>If refactoring breaks your code, your code is already broken</p>
+		</li>
+	</ol>
+</section>
+<section class="slide" id="slide-8">
+	<h2>3: Use standard or jslint</h2>
+	<ol>
+		<li>
+			<h3>"We use JsHint"</h3>
+			<p>Stop then</p>
+		</li>
+	</ol>
+</section>
+
+
+<section class="slide" id="slide-9">
+	<h2>Size matters</h2>
+
+	<img src="http://media.giphy.com/media/eTvuElDlzbANq/giphy.gif" width="350" height="300" />
+	<h3>Make everything small (except for names)</h3>
+	<ol>
+		<li>
+			<h4>functions - make them small</h4>
+		</li>
+		<li>
+			<h4>files - make them small</h4>
+		</li>
+		<li>
+			<h4>modules - make them small</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-10">
+	<h2>Naming</h2>
+
+	<img src="http://media.giphy.com/media/10Y47fkyfXlrsA/giphy.gif" width="350" height="300" />
+	<h3>This isn't a crossword, write in plain english</h3>
+	<ol>
+		<li>
+			<h4>Names can be long</h4>
+		</li>
+		<li>
+			<h4>If the name is too long, the function is doing too much</h4>
+		</li>
+		<li>
+			<h5>"If there's a shorter, but yet descriptive way to name the function, then the function name is too long." - some dude on stack overflow</h5>
+		</li>
+		<li>
+			<h4>Example code</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-11">
+	<h2>Read from the top</h2>
+	<ol>
+		<li>
+			<h4>This isn't Japanese. English is a Left To Right, Top to Bottom language </h4>
+			<p>Please stop starting all your entry points at the bottom of your files</p>
+		</li>
+		<li>
+			<h4>This is an easy one, just read your code</h4>
+		</li>
+		<li>
+			<h4>Example code</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-12">
+	<h2>Comments</h2>
+
+	<img src="http://media.giphy.com/media/CDVPlCA103MTC/giphy.gif" width="350" height="300" />
+	<h3>Delete them (except jsdoc)</h3>
+	<ol>
+		<li>
+			<h4>Commented out code</h4>
+			<p>Why do we even have version control?</p>
+		</li>
+		<li>
+			<h4>You need to maintain two things now</h4>
+		</li>
+		<li>
+			<h4>JsDoc comments are legitimately useful</h4>
+		</li>
+		<li>
+			<h4>Ok sometimes you can use comments. But it's rare.</h4>
+		</li>
+	</ol>
+</section>
+
+
+<section class="slide" id="slide-13">
+	<h2>Don't make services</h2>
+	<img src="http://media.giphy.com/media/ze8WLky4aOoDu/giphy.gif" width="350" height="300" />
+	<h3>They're just cleverly designed god classes</h3>
+	<p>"Where do I put X? Oh the XService! Wow, 1200 lines. We should really refactor this some time"</p>
+	<p>Use commands and queries</p>
+</section>
+
+<section class="slide" id="slide-14">
+	<h2>Catch errors only at your entry points</h2>
+	<img src="http://media.giphy.com/media/bAy8xK8qcCz0A/giphy.gif" width="350" height="300" />
+	<h3>You'll log errors better</h3>
+	<h3>You'll force your functions to be smaller</h3>
+</section>
+
+<section class="slide" id="slide-15">
+	<h2>Code for debugging is a massive code smell</h2>
+	<img src="http://media.giphy.com/media/XDfOon37UeVry/giphy.gif" width="350" height="300" />
+	<h3>This usually means your error reporting is lacking</h3>
+	<h3>More logging? See 'comments'</h3>
+</section>
+
+<section class="slide" id="slide-16">
+	<h2>Read Clean Code</h2>
+	<img src="http://ecx.images-amazon.com/images/I/51oXyW8WQwL._SX258_BO1,204,203,200_.jpg" width="350" height="300" />
+</section>
+
+<section class="slide" id="slide-17">
+	<h2>Come to the node meetup</h2>
+	<img src="https://node-arm.herokuapp.com/images/nodejs.png" width="350" height="300" />
+	<p>This month: nw.js and live coding a promises library</p>
+</section>
+
+<section class="slide" id="slide-18">
+	<h2>I don't agree with a thing you just said.</h2>
+	<img src="http://media.giphy.com/media/3o85xnoIXebk3xYx4Q/giphy.gif" width="350" height="300" />
+		<h3>In fact Jacob, I think YOU'RE the idiot</h3>
+	<h4>Yell at me in person or everywhere @jladuval</h4>
+</section>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../jquery-1.7.2.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>
+
+<!-- controldeck.js -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="/controldeck-slides.js"></script>
+
+</body>
+</html>
